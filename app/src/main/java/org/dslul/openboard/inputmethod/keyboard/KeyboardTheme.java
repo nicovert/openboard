@@ -36,6 +36,7 @@ public final class KeyboardTheme implements Comparable<KeyboardTheme> {
     public static final String THEME_FAMILY_HOLO = "Holo (Legacy)";
     public static final String THEME_VARIANT_LIGHT = "Light";
     public static final String THEME_VARIANT_DARK = "Dark";
+    public static final String THEME_VARIANT_GRAY = "Gray";
     public static final String THEME_VARIANT_WHITE = "White";
     public static final String THEME_VARIANT_BLUE = "Blue";
 
@@ -44,7 +45,7 @@ public final class KeyboardTheme implements Comparable<KeyboardTheme> {
 
     static {
         THEME_VARIANTS.put(THEME_FAMILY_MATERIAL,
-                new String[] {THEME_VARIANT_LIGHT, THEME_VARIANT_DARK});
+                new String[] {THEME_VARIANT_LIGHT, THEME_VARIANT_DARK, THEME_VARIANT_GRAY});
         THEME_VARIANTS.put(THEME_FAMILY_HOLO,
                 new String[] {THEME_VARIANT_WHITE, THEME_VARIANT_BLUE});
     }
@@ -66,6 +67,8 @@ public final class KeyboardTheme implements Comparable<KeyboardTheme> {
     public static final int THEME_ID_LXX_DARK = 7;
     public static final int THEME_ID_LXX_AUTO = 9;
     public static final int THEME_ID_LXX_AUTO_BORDER = 8;
+	public static final int THEME_ID_LXX_GRAY_BORDER = 11;
+	public static final int THEME_ID_LXX_GRAY = 12;
     public static final int DEFAULT_THEME_ID = THEME_ID_LXX_DARK_BORDER;
 
     private static KeyboardTheme[] AVAILABLE_KEYBOARD_THEMES;
@@ -102,6 +105,12 @@ public final class KeyboardTheme implements Comparable<KeyboardTheme> {
         new KeyboardTheme(THEME_ID_LXX_AUTO_AMOLED, "LXXAutoAmoled", R.style.KeyboardTheme_LXX_Auto_Amoled,
                 // This has never been selected as default theme.
                 VERSION_CODES.LOLLIPOP),
+	    new KeyboardTheme(THEME_ID_LXX_GRAY, "LXXGray", R.style.KeyboardTheme_LXX_Gray,
+			    //This has never been selected as default theme.
+			    VERSION_CODES.BASE),
+	    new KeyboardTheme(THEME_ID_LXX_GRAY_BORDER, "LXXGrayBorder", R.style.KeyboardTheme_LXX_Gray_Border,
+			    // This has never been selected as default theme.
+			    VERSION_CODES.LOLLIPOP),
     };
 
     static {
@@ -250,6 +259,9 @@ public final class KeyboardTheme implements Comparable<KeyboardTheme> {
             case THEME_ID_LXX_LIGHT:
             case THEME_ID_LXX_LIGHT_BORDER:
                 return THEME_VARIANT_LIGHT;
+	        case THEME_ID_LXX_GRAY:
+	        case THEME_ID_LXX_GRAY_BORDER:
+	        	return THEME_VARIANT_GRAY;
             case THEME_ID_KLP:
                 return THEME_VARIANT_WHITE;
             case THEME_ID_ICS:
@@ -264,6 +276,7 @@ public final class KeyboardTheme implements Comparable<KeyboardTheme> {
             case THEME_ID_LXX_DARK_BORDER:
             case THEME_ID_LXX_LIGHT_BORDER:
             case THEME_ID_LXX_AUTO_BORDER:
+	        case THEME_ID_LXX_GRAY_BORDER:
             case THEME_ID_ICS:
             case THEME_ID_KLP:
                 return true;
@@ -308,6 +321,10 @@ public final class KeyboardTheme implements Comparable<KeyboardTheme> {
             if (keyBorders) return THEME_ID_LXX_DARK_BORDER;
             if (amoledMode) return THEME_ID_LXX_DARK_AMOLED;
             return THEME_ID_LXX_DARK;
+        }
+        if (THEME_VARIANT_GRAY.equals(variant)) {
+        	if (keyBorders) return THEME_ID_LXX_GRAY_BORDER;
+        	return THEME_ID_LXX_GRAY;
         }
         if (keyBorders) return THEME_ID_LXX_LIGHT_BORDER;
         return THEME_ID_LXX_LIGHT;

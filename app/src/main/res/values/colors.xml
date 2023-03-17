@@ -105,6 +105,35 @@
 
     <color name="popup_background_material_dark_theme">#ff3c474c</color>
 
+	<!-- Color resources for LXX_Gray theme.
+         10%:0x19 50%:0x80 70%:0xB3 75%:0xC0 80%:0xCC 85%:0xD9 90%:0xE6  -->
+	<color name="key_text_color_lxx_gray">#CCFFFFFF</color>
+	<color name="key_functional_text_color_lxx_gray">#CCFFFFFF</color>
+	<color name="key_text_inactive_color_lxx_gray">#80FFFFFF</color>
+	<color name="key_hint_letter_color_lxx_gray">#80FFFFFF</color>
+	<color name="language_on_spacebar_text_color_lxx_gray">#B3FFFFFF</color>
+	<color name="highlight_color_lxx_gray">#FFFFFF</color>
+	<color name="auto_correct_color_lxx_gray">#FFFFFF</color>
+	<color name="typed_word_color_lxx_gray">#D9FFFFFF</color>
+	<color name="suggested_word_color_lxx_gray">#B3FFFFFF</color>
+	<color name="gesture_trail_color_lxx_gray">#FFFFFF</color>
+	<color name="sliding_key_input_preview_color_lxx_gray">#808080</color>
+	<color name="key_background_lxx_gray">#00000000</color>
+	<color name="key_background_pressed_lxx_gray">#19FFFFFF</color>
+	<color name="action_key_background_lxx_gray">#282828</color>
+	<color name="action_key_background_pressed_lxx_gray">#7B7D7A</color>
+	<color name="suggested_word_background_selected_lxx_gray">#19FFFFFF</color>
+	<color name="gesture_floating_preview_color_lxx_gray">#E6282828</color>
+	<color name="emoji_tab_page_indicator_background_lxx_gray">#282828</color>
+	<!-- Color resources for LXX_Gray_Border theme.
+		 15%:0x26 70%:0xB3 75%:0xC0 80%:0xCC 85%:0xD9 90%:0xE6 -->
+	<color name="keyboard_background_lxx_gray_border">#222222</color>
+	<color name="key_background_normal_lxx_gray_border">#4d4d4d</color>
+	<color name="key_background_pressed_lxx_gray_border">#424242</color>
+	<color name="key_background_functional_lxx_gray_border">#1f1f1f</color>
+	<color name="key_bottom_bevel_lxx_gray">#252525</color>
+	<color name="emoji_tab_page_indicator_background_lxx_gray_border">#1f1f1f</color>
+
     <!-- Color resources for setup wizard and tutorial -->
     <color name="setup_background">#FFEBEBEB</color>
     <color name="setup_text_dark">#FF707070</color>

@@ -34,4 +34,12 @@
     <color name="action_key_background_lxx_dark">@color/highlight_color_lxx_dark</color>
     <color name="action_key_background_pressed_lxx_dark">@android:color/system_accent1_200</color>
     <color name="icon_tint_system_accent_lxx_dark">@color/highlight_color_lxx_dark</color>
+
+	<!-- System theming colors for LXX_Gray theme, overriding some colors in main colors.xml -->
+    <color name="highlight_color_lxx_gray">#FFFFFF</color>
+    <color name="gesture_trail_color_lxx_gray">#FFFFFF</color>
+    <color name="sliding_key_input_preview_color_lxx_gray">#808080</color>
+    <color name="action_key_background_lxx_gray">#282828</color>
+    <color name="action_key_background_pressed_lxx_gray">#7B7D7A</color>
+    <color name="icon_tint_system_accent_lxx_gray">#FFFFFF</color>
 </resources>
